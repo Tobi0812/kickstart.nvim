@@ -574,6 +574,9 @@ require('lazy').setup({
         cssls = {},
         ts_ls = {},
         sqlls = {},
+        powershell_es = {
+          bundle_path = '~/.config/nvim/powershell/PowerShellEditorServices/',
+        },
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -924,6 +927,13 @@ require('lazy').setup({
     },
   },
 })
+
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
